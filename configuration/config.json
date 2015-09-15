@@ -1,0 +1,57 @@
+{
+	"devices": {
+		"EetkamerLampjeLinks": {
+			"protocol": [ "kaku_switch" ],
+			"id": [{
+				"id": 3883038,
+				"unit": 0
+			}],
+			"state": "on"
+		},
+		"EetkamerLampjeRechts": {
+			"protocol": [ "kaku_switch" ],
+			"id": [{
+				"id": 3883038,
+				"unit": 1
+			}],
+			"state": "on"
+		}
+	},
+	"rules": {},
+	"gui": {
+		"EetkamerLampjeLinks": {
+			"name": "Eetkamer Lampje Links",
+			"group": [ "Eetkamer" ],
+			"media": [ "all" ],
+			"readonly": 0
+		},
+		"EetkamerLampjeRechts": {
+			"name": "Eetkamer Lampje Rechts",
+			"group": [ "Eetkamer" ],
+			"media": [ "all" ],
+			"readonly": 0
+		}
+	},
+	"settings": {
+		"log-level": 6,
+		"pid-file": "/var/run/pilight.pid",
+		"log-file": "/var/log/pilight.log",
+		"webserver-enable": 1,
+		"webserver-root": "/usr/local/share/pilight/",
+		"webserver-http-port": 5001,
+		"webserver-cache": 1
+	},
+	"hardware": {
+		"433gpio": {
+			"sender": 0,
+			"receiver": 1
+		}
+	},
+	"registry": {
+		"pilight": {
+			"version": {
+				"current": "7.0"
+			}
+		}
+	}
+}
