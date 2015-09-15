@@ -16,7 +16,7 @@ Install Pilight on a RPI B+ from a MAC
 9.	arp –a|grep pi (to find the IP of the Pi)
 10.	ssh pi@ip-of-the-pi	
 11.	Expand the filesystem with the raspi-config tool sudo raspi-config (menu 1)
-12.	Rename the hostname
+12.	Rename the hostname (A2)
 13.	Reboot the Pi
 14.	On the Pi:
 a.	sudo apt-get update
