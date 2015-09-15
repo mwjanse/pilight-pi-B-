@@ -1,0 +1,33 @@
+Pilight
+
+
+Installation
+
+Install Pilight on a RPI B+ from a MAC
+
+1.	Download raspbian from: http://downloads.raspberrypi.org/raspbian_latest
+2.	Unzip it
+3.	Insert a micro SD-card into the mac
+4.	In the terminal on the mac type : df –h	to find the SD-card
+5.	sudo diskutil unmount /dev/diskXs1 (x Is the disk of the SD-card)
+6.	sudo dd bs=1m if=~/Downloads/raspbian.img of=/dev/rdiskX
+7.	sudo diskutil eject /dev/rdiskX 
+8.	Put the SD-card into the RaspberryPi and boot it
+9.	arp –a|grep pi (to find the IP of the Pi)
+10.	ssh pi@ip-of-the-pi	
+11.	Expand the filesystem with the raspi-config tool sudo raspi-config (menu 1)
+12.	Rename the hostname
+13.	Reboot the Pi
+14.	On the Pi:
+a.	sudo apt-get update
+b.	sudo apt-get upgrade
+c.	sudo su
+d.	echo "deb http://apt.pilight.org/ stable main" > /etc/apt/sources.list.d/pilight.list
+e.  wget -O - http://apt.pilight.org/pilight.key | apt-key add -
+f.  apt-get update
+g.  apt-get install pilight
+h.  service pilight start
+
+
+Configuration
+
